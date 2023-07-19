@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for greenkiosk project.
 
@@ -43,6 +45,8 @@ INSTALLED_APPS = [
     'SignUp',
     'Delivery',
     'Cart',
+    'vendor',
+    'customer'
 ]
 
 MIDDLEWARE = [
@@ -60,7 +64,7 @@ ROOT_URLCONF = 'greenkiosk.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
